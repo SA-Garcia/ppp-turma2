@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/SA-Garcia/ppp-turma2/issues"
   },
-  "homepage": "https://github.com/SA-Garcia/ppp-turma2#readme"
+  "homepage": "https://github.com/SA-Garcia/ppp-turma2#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^13.0.0"
+  }
 }
