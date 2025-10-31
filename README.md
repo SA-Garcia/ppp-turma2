@@ -31,7 +31,7 @@ Esta API permite o registro e monitoramento de incidentes relacionados à segura
 - Utilize o token JWT retornado no login no header `Authorization: Bearer <token>` para acessar rotas protegidas.
 
 ## Como subir o servidor
-1. Crie o arquivo `package.json` (se ainda não fez):
+1. Crie o arquivo `package.json`:
    ```bash
    npm init -y
    ```
@@ -47,6 +47,17 @@ Esta API permite o registro e monitoramento de incidentes relacionados à segura
 
 ## Acesse a documentação Swagger
 - [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
+
+
+## Regras de Negócio (para testes de qualidade)
+
+- Apenas cidadãos podem registrar ocorrências.
+- Apenas servidores públicos autenticados podem alterar o status de uma ocorrência (para "em andamento" ou "finalizado").
+- Cadastro e visualização de servidores públicos são restritos a servidores autenticados.
+- Cidadãos não podem acessar dados de cadastro de servidores públicos.
+- Todos os endpoints protegidos exigem autenticação via JWT.
+- O status inicial de uma ocorrência é sempre "aberto".
+- O sistema aceita múltiplos relatos para a mesma ocorrência (campo `reporterIds`).
 
 ## Observações
 - Banco de dados em memória (os dados são perdidos ao reiniciar o servidor)
